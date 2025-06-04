@@ -1,0 +1,186 @@
+[DeFooocus] Preparing ...
+/content
+Cloning into 'DeFooocus'...
+remote: Enumerating objects: 6081, done.
+remote: Counting objects: 100% (6081/6081), done.
+remote: Compressing objects: 100% (2404/2404), done.
+remote: Total 6081 (delta 3248), reused 6081 (delta 3248), pack-reused 0 (from 0)
+Receiving objects: 100% (6081/6081), 42.24 MiB | 33.12 MiB/s, done.
+Resolving deltas: 100% (3248/3248), done.
+/content/DeFooocus
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.6/113.6 kB 7.2 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.4/58.4 kB 4.1 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.0/57.0 kB 4.3 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.5/68.5 kB 5.3 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.5/68.5 kB 6.5 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 82.3/82.3 kB 6.1 MB/s eta 0:00:00
+  Preparing metadata (setup.py) ... done
+  Preparing metadata (setup.py) ... done
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.8/46.8 kB 3.9 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.2/61.2 kB 5.1 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.2/7.2 MB 80.4 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 68.4 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 244.2/244.2 kB 21.3 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 757.9/757.9 kB 53.4 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 101.7 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 33.4/33.4 MB 32.9 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 77.1/77.1 kB 6.7 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 827.8/827.8 kB 53.8 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.3/79.3 kB 6.9 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 20.1/20.1 MB 104.8 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.8/67.8 MB 10.0 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 79.8 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 75.4/75.4 kB 6.2 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.4/6.4 MB 117.9 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 84.7 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.7/54.7 kB 4.6 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 436.4/436.4 kB 33.6 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 298.2/298.2 kB 26.6 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 74.5/74.5 kB 7.0 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.2/18.2 MB 113.7 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 82.3/82.3 kB 7.1 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.8/7.8 MB 123.6 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 363.4/363.4 MB 3.8 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.8/13.8 MB 85.1 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.6/24.6 MB 68.9 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 883.7/883.7 kB 42.5 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 664.8/664.8 MB 1.2 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 211.5/211.5 MB 5.8 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.3/56.3 MB 15.2 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 127.9/127.9 MB 7.3 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 207.5/207.5 MB 6.3 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.1/21.1 MB 104.3 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 962.5/962.5 kB 54.1 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.6/130.6 kB 11.6 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.0/46.0 kB 3.6 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.7/54.7 kB 5.2 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.9/14.9 MB 34.0 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 256.2/256.2 kB 20.6 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 119.7/119.7 kB 10.3 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.3/58.3 kB 5.6 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.8/86.8 kB 8.2 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.5/144.5 kB 13.1 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.8/56.8 kB 5.0 MB/s eta 0:00:00
+  Building wheel for groundingdino-py (setup.py) ... done
+  Building wheel for PyExecJS (setup.py) ... done
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+google-genai 1.17.0 requires httpx<1.0.0,>=0.28.1, but you have httpx 0.24.1 which is incompatible.
+google-genai 1.17.0 requires websockets<15.1.0,>=13.0.0, but you have websockets 11.0.3 which is incompatible.
+albumentations 2.0.8 requires scipy>=1.10.0, but you have scipy 1.9.3 which is incompatible.
+torchtune 0.6.1 requires Pillow>=9.4.0, but you have pillow 9.2.0 which is incompatible.
+imbalanced-learn 0.13.0 requires scipy<2,>=1.10.1, but you have scipy 1.9.3 which is incompatible.
+jaxlib 0.5.1 requires scipy>=1.11.1, but you have scipy 1.9.3 which is incompatible.
+blosc2 3.3.4 requires numpy>=1.26, but you have numpy 1.25.2 which is incompatible.
+yfinance 0.2.61 requires websockets>=13.0, but you have websockets 11.0.3 which is incompatible.
+tsfresh 0.21.0 requires scipy>=1.14.0; python_version >= "3.10", but you have scipy 1.9.3 which is incompatible.
+tensorflow 2.18.0 requires numpy<2.1.0,>=1.26.0, but you have numpy 1.25.2 which is incompatible.
+dataproc-spark-connect 0.7.5 requires tqdm>=4.67, but you have tqdm 4.65.0 which is incompatible.
+dataproc-spark-connect 0.7.5 requires websockets>=14.0, but you have websockets 11.0.3 which is incompatible.
+jax 0.5.2 requires scipy>=1.11.1, but you have scipy 1.9.3 which is incompatible.
+datasets 2.14.4 requires dill<0.3.8,>=0.3.0, but you have dill 0.4.0 which is incompatible.
+stumpy 1.13.0 requires scipy>=1.10, but you have scipy 1.9.3 which is incompatible.
+cvxpy 1.6.5 requires scipy>=1.11.0, but you have scipy 1.9.3 which is incompatible.
+sentence-transformers 4.1.0 requires transformers<5.0.0,>=4.41.0, but you have transformers 4.30.2 which is incompatible.
+thinc 8.3.6 requires numpy<3.0.0,>=2.0.0, but you have numpy 1.25.2 which is incompatible.
+xarray-einstats 0.9.0 requires scipy>=1.11, but you have scipy 1.9.3 which is incompatible.
+[DeFooocus] Starting ...
+Already up-to-date
+Update succeeded.
+[System ARGV] ['entry_with_update.py', '--share', '--attention-split', '--always-high-vram', '--disable-offload-from-vram', '--all-in-fp16', '--theme', 'dark']
+Python 3.11.12 (main, Apr  9 2025, 08:55:54) [GCC 11.4.0]
+Fooocus version: 0.2
+Downloading: "https://huggingface.co/lllyasviel/misc/resolve/main/xlvaeapp.pth" to /content/DeFooocus/models/vae_approx/xlvaeapp.pth
+
+100% 209k/209k [00:00<00:00, 18.7MB/s]
+Downloading: "https://huggingface.co/lllyasviel/misc/resolve/main/vaeapp_sd15.pt" to /content/DeFooocus/models/vae_approx/vaeapp_sd15.pth
+
+100% 209k/209k [00:00<00:00, 15.6MB/s]
+Downloading: "https://huggingface.co/lllyasviel/misc/resolve/main/xl-to-v1_interposer-v3.1.safetensors" to /content/DeFooocus/models/vae_approx/xl-to-v1_interposer-v3.1.safetensors
+
+100% 6.25M/6.25M [00:00<00:00, 140MB/s]
+Downloading: "https://huggingface.co/lllyasviel/misc/resolve/main/fooocus_expansion.bin" to /content/DeFooocus/models/prompt_expansion/fooocus_expansion/pytorch_model.bin
+
+100% 335M/335M [00:00<00:00, 376MB/s]
+Downloading: "https://huggingface.co/fluently/Fluently-XL-v4/resolve/main/FluentlyXL-v4.safetensors" to /content/DeFooocus/models/checkpoints/FluentlyXL-v4.safetensors
+
+100% 6.62G/6.62G [00:37<00:00, 190MB/s]
+Downloading: "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_offset_example-lora_1.0.safetensors" to /content/DeFooocus/models/loras/sd_xl_offset_example-lora_1.0.safetensors
+
+100% 47.3M/47.3M [00:00<00:00, 336MB/s]
+Total VRAM 15095 MB, total RAM 12978 MB
+Forcing FP16.
+Set vram state to: HIGH_VRAM
+Device: cuda:0 Tesla T4 : native
+VAE dtype: torch.float32
+Using split optimization for cross attention
+2025-06-04 09:20:27.697283: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749028828.006137    8267 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749028828.089372    8267 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+Refiner unloaded.
+model_type EPS
+UNet ADM Dimension 2816
+Using split attention in VAE
+Working with z of shape (1, 4, 32, 32) = 4096 dimensions.
+Using split attention in VAE
+extra {'cond_stage_model.clip_l.logit_scale', 'cond_stage_model.clip_l.text_projection', 'cond_stage_model.clip_g.transformer.text_model.embeddings.position_ids'}
+loaded straight to GPU
+Requested to load SDXL
+Loading 1 new model
+Base model loaded: /content/DeFooocus/models/checkpoints/FluentlyXL-v4.safetensors
+Request to load LoRAs [['sd_xl_offset_example-lora_1.0.safetensors', 0.1], ['None', 1.0], ['None', 1.0], ['None', 1.0], ['None', 1.0]] for model [/content/DeFooocus/models/checkpoints/FluentlyXL-v4.safetensors].
+Loaded LoRA [/content/DeFooocus/models/loras/sd_xl_offset_example-lora_1.0.safetensors] for UNet [/content/DeFooocus/models/checkpoints/FluentlyXL-v4.safetensors] with 788 keys at weight 0.1.
+Fooocus V2 Expansion: Vocab with 642 words.
+Fooocus Expansion engine loaded for cuda:0, use_fp16 = True.
+Requested to load SDXLClipModel
+Requested to load GPT2LMHeadModel
+Loading 2 new models
+[Fooocus Model Management] Moving model(s) has taken 1.20 seconds
+/usr/local/lib/python3.11/dist-packages/diffusers/utils/outputs.py:63: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  torch.utils._pytree._register_pytree_node(
+Started worker with PID 8267
+'NoneType' object has no attribute 'local_url'
+theme_schema%400.0.1.json: 100% 13.7k/13.7k [00:00<00:00, 54.2MB/s]
+Running on local URL:  http://127.0.0.1:7865
+IMPORTANT: You are using gradio version 3.41.2, however version 4.44.1 is available, please upgrade.
+--------
+Running on public URL: https://0d6bc6967e2ed561d8.gradio.live
+
+This share link expires in 72 hours. For free permanent hosting and GPU upgrades, run `gradio deploy` from Terminal to deploy to Spaces (https://huggingface.co/spaces)
+[Parameters] Adaptive CFG = 7
+[Parameters] Sharpness = 2
+[Parameters] ControlNet Softness = 0.25
+[Parameters] ADM Scale = 1.5 : 0.8 : 0.3
+[Parameters] CFG = 4.0
+[Parameters] Seed = 5530933690066544536
+[Parameters] Sampler = dpmpp_2m_sde_gpu - karras
+[Parameters] Steps = 25 - 12
+[Fooocus] Initializing ...
+[Fooocus] Loading models ...
+Refiner unloaded.
+[Fooocus] Processing prompts ...
+[Fooocus] Preparing Fooocus text #1 ...
+[Prompt Expansion] generate a picture of Donald Trump with a TACO crown and he is eating a TACO, detailed, magical, highly intricate, excellent composition, cinematic atmosphere, dynamic dramatic ambient light, precise perfect, aesthetic, very inspirational, illustrious, fine detail, clear artistic quality, stunning, winning color, beautiful, innocent, epic, classic, open background, professional
+[Fooocus] Encoding positive #1 ...
+[Fooocus] Encoding negative #1 ...
+[Parameters] Denoising Strength = 1.0
+[Parameters] Initial Latent shape: Image Space (896, 1152)
+Preparation time: 3.93 seconds
+[Sampler] refiner_swap_method = joint
+[Sampler] sigma_min = 0.0291671771556139, sigma_max = 14.614643096923828
+Requested to load SDXL
+Loading 1 new model
+unload clone 2
+[Fooocus Model Management] Moving model(s) has taken 1.78 seconds
+100% 25/25 [00:42<00:00,  1.69s/it]
+Requested to load AutoencoderKL
+Loading 1 new model
+[Fooocus Model Management] Moving model(s) has taken 0.31 seconds
+Image generated with private log at: /content/DeFooocus/outputs/2025-06-04/log.html
+Generating and saving time: 47.08 seconds
+Requested to load SDXLClipModel
+Requested to load GPT2LMHeadModel
+Loading 2 new models
+Total time: 51.04 seconds
+[Fooocus Model Management] Moving model(s) has taken 0.71 seconds
+
