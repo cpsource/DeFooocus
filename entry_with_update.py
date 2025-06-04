@@ -1,3 +1,5 @@
+"""Self-updating entry point that fetches Git updates before launching."""
+
 import os
 import sys
 

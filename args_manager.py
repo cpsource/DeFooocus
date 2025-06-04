@@ -1,3 +1,5 @@
+"""Command line argument setup for DeFooocus."""
+
 import ldm_patched.modules.args_parser as args_parser
 import os
 

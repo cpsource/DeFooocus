@@ -1,3 +1,5 @@
+"""Launches the DeFooocus application after preparing the environment."""
+
 import os
 import sys
 import ssl
@@ -28,6 +30,7 @@ TRY_INSTALL_XFORMERS = False
 
 
 def prepare_environment():
+    """Install dependencies and prepare environment variables."""
     torch_index_url = os.environ.get('TORCH_INDEX_URL', "https://download.pytorch.org/whl/cu121")
     torch_command = os.environ.get('TORCH_COMMAND',
                                    f"pip install torch==2.1.0 torchvision==0.16.0 --extra-index-url {torch_index_url}")
@@ -69,6 +72,7 @@ vae_approx_filenames = [
 
 
 def ini_args():
+    """Import and return command line arguments."""
     from args_manager import args
     return args
 
@@ -86,6 +90,7 @@ os.environ["U2NET_HOME"] = config.path_inpaint
 
 
 def download_models(default_model, previous_default_models, checkpoint_downloads, embeddings_downloads, lora_downloads):
+    """Download model files required for operation."""
     for file_name, url in vae_approx_filenames:
         load_file_from_url(url=url, model_dir=config.path_vae_approx, file_name=file_name)
 

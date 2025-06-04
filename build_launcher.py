@@ -1,3 +1,5 @@
+"""Utility for generating Windows launcher batch files."""
+
 import os
 
 win32_root = os.path.dirname(os.path.dirname(__file__))
@@ -12,6 +14,7 @@ pause
 
 
 def build_launcher():
+    """Create Windows batch launchers for different presets."""
     if not is_win32_standalone_build:
         return
 

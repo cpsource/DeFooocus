@@ -1,3 +1,5 @@
+"""Gradio-based user interface for DeFooocus."""
+
 import gradio as gr
 import random
 import os
@@ -33,16 +35,19 @@ PHOTOPEA_IFRAME_LOADED_EVENT = "onPhotopeaLoaded"
 
 
 def get_photopea_url_params():
-    return "#%7B%22resources%22:%5B%22data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIAAQMAAADOtka5AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAANQTFRF////p8QbyAAAADZJREFUeJztwQEBAAAAgiD/r25IQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfBuCAAAB0niJ8AAAAABJRU5ErkJggg==%22%5D%7D"
+    """Return URL parameters for loading Photopea with a blank canvas."""
+    return ("#%7B%22resources%22:%5B%22data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIAAQMAAADOtka5AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAANQTFRF////p8QbyAAAADZJREFUeJztwQEBAAAAgiD/r25IQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABfBuCAAAB0niJ8AAAAABJRU5ErkJggg==%22%5D%7D")
 
 
 def get_task(*args):
+    """Create an AsyncTask from UI parameters."""
     args = list(args)
     args.pop(0)
 
     return worker.AsyncTask(args=args)
 
 def generate_clicked(task):
+    """Handle the generation button click and stream progress."""
     import ldm_patched.modules.model_management as model_management
 
     with model_management.interrupt_processing_mutex:
@@ -860,6 +865,7 @@ with shared.gradio_root:
                        outputs=[prompt, style_selections], show_progress=True, queue=True)
 
 def dump_default_english_config():
+    """Dump the default English localization file."""
     from modules.localization import dump_english_config
     dump_english_config(grh.all_components)
 
