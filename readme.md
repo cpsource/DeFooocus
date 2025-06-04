@@ -5,6 +5,8 @@ We are glad to introduce DeFooocus - it is a fork of the Fooocus interface, it c
 
 This is just a fork (and a fork of forks), we are not the authors of this creation, all thanks to [llyasviel](https://github.com/lllyasviel).
 
+See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for an overview of how DeFooocus starts and processes a generation request.
+
 [>>> DeFooocus on CivitAI <<<](https://civitai.com/models/519557)
 
 ![preview](assets/preview.png)
