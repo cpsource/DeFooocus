@@ -1,3 +1,5 @@
+"""Example usage of the photo and anime interrogators."""
+
 import cv2
 from extras.interrogate import default_interrogator as default_interrogator_photo
 from extras.wd14tagger import default_interrogator as default_interrogator_anime

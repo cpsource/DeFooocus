@@ -1,3 +1,5 @@
+"""Simple test script for the Fooocus text expansion module."""
+
 from modules.expansion import FooocusExpansion
 
 expansion = FooocusExpansion()

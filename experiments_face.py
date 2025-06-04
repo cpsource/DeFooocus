@@ -1,3 +1,5 @@
+"""Demonstration script for the face cropping utility."""
+
 import cv2
 import extras.face_crop as cropper
 
