@@ -1,5 +1,14 @@
 // based on https://github.com/AUTOMATIC1111/stable-diffusion-webui/blob/v1.6.0/javascript/contextMenus.js
 
+/**
+ * Initialize the context menu utilities.
+ *
+ * Returns helper functions to append or remove menu options and to
+ * attach the event listener responsible for displaying the context
+ * menu.
+ *
+ * @returns {Array} Functions controlling context menu behaviour.
+ */
 var contextMenuInit = function() {
     let eventListenerApplied = false;
     let menuSpecs = new Map();
@@ -8,6 +17,13 @@ var contextMenuInit = function() {
         return Date.now().toString(36) + Math.random().toString(36).substring(2);
     };
 
+    /**
+     * Display the context menu at the cursor position.
+     *
+     * @param {Event} event - The triggering event.
+     * @param {Element} element - DOM element that invoked the menu.
+     * @param {Array} menuEntries - Menu entry descriptors.
+     */
     function showContextMenu(event, element, menuEntries) {
         let posx = event.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
         let posy = event.clientY + document.body.scrollTop + document.documentElement.scrollTop;
@@ -59,6 +75,14 @@ var contextMenuInit = function() {
 
     }
 
+    /**
+     * Register a new option for a specific target element.
+     *
+     * @param {string} targetElementSelector - CSS selector for the element that triggers the menu.
+     * @param {string} entryName - Visible name of the menu entry.
+     * @param {Function} entryFunction - Function executed on selection.
+     * @returns {string} Unique identifier for the created entry.
+     */
     function appendContextMenuOption(targetElementSelector, entryName, entryFunction) {
 
         var currentItems = menuSpecs.get(targetElementSelector);
@@ -78,6 +102,11 @@ var contextMenuInit = function() {
         return newItem['id'];
     }
 
+    /**
+     * Remove a context menu option by its unique identifier.
+     *
+     * @param {string} uid - Identifier returned by appendContextMenuOption.
+     */
     function removeContextMenuOption(uid) {
         menuSpecs.forEach(function(v) {
             let index = -1;
@@ -92,6 +121,10 @@ var contextMenuInit = function() {
         });
     }
 
+    /**
+     * Attach global click and context menu listeners for displaying
+     * and hiding the custom context menu.
+     */
     function addContextMenuEventListener() {
         if (eventListenerApplied) {
             return;
@@ -130,12 +163,22 @@ var appendContextMenuOption = initResponse[0];
 var removeContextMenuOption = initResponse[1];
 var addContextMenuEventListener = initResponse[2];
 
+/**
+ * Stop any active repeating generation loop created by the example
+ * context menu actions.
+ */
 let cancelGenerateForever = function() {
     clearInterval(window.generateOnRepeatInterval);
 };
 
 (function() {
     //Start example Context Menu Items
+    /**
+     * Continuously trigger a generation button until an interrupt button becomes visible.
+     *
+     * @param {string} genbuttonid - Selector for the generate button.
+     * @param {string} interruptbuttonid - Selector for the interrupt button.
+     */
     let generateOnRepeat = function(genbuttonid, interruptbuttonid) {
         let genbutton = gradioApp().querySelector(genbuttonid);
         let interruptbutton = gradioApp().querySelector(interruptbuttonid);
@@ -151,6 +194,9 @@ let cancelGenerateForever = function() {
         500);
     };
 
+    /**
+     * Shortcut bound to the menu item that starts endless generation.
+     */
     let generateOnRepeatForButtons = function() {
         generateOnRepeat('#generate_button', '#stop_button');
     };
@@ -159,6 +205,9 @@ let cancelGenerateForever = function() {
 })();
 //End example Context Menu Items
 
+/**
+ * When the document is fully loaded attach the context menu listeners.
+ */
 document.onreadystatechange = function () {
     if (document.readyState == "complete") {
         addContextMenuEventListener();

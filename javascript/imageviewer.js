@@ -1,9 +1,17 @@
 // From A1111
 
+/**
+ * Hide the lightbox modal used for viewing images.
+ */
 function closeModal() {
     gradioApp().getElementById("lightboxModal").style.display = "none";
 }
 
+/**
+ * Display the lightbox modal for the clicked image.
+ *
+ * @param {Event} event - Click event originating from the thumbnail.
+ */
 function showModal(event) {
     const source = event.target || event.srcElement;
     const modalImage = gradioApp().getElementById("modalImage");
@@ -18,10 +26,17 @@ function showModal(event) {
     event.stopPropagation();
 }
 
+/**
+ * Mathematical modulo that always returns a positive result.
+ */
 function negmod(n, m) {
     return ((n % m) + m) % m;
 }
 
+/**
+ * Keep the modal image in sync when gallery selection changes in the
+ * background.
+ */
 function updateOnBackgroundChange() {
     const modalImage = gradioApp().getElementById("modalImage");
     if (modalImage && modalImage.offsetParent) {
@@ -37,6 +52,9 @@ function updateOnBackgroundChange() {
     }
 }
 
+/**
+ * Return all visible gallery thumbnail buttons.
+ */
 function all_gallery_buttons() {
     var allGalleryButtons = gradioApp().querySelectorAll('.image_gallery .thumbnails > .thumbnail-item.thumbnail-small');
     var visibleGalleryButtons = [];
@@ -48,14 +66,25 @@ function all_gallery_buttons() {
     return visibleGalleryButtons;
 }
 
+/**
+ * Get the currently selected gallery button element or null.
+ */
 function selected_gallery_button() {
     return all_gallery_buttons().find(elem => elem.classList.contains('selected')) ?? null;
 }
 
+/**
+ * Index of the selected gallery button among visible buttons.
+ */
 function selected_gallery_index() {
     return all_gallery_buttons().findIndex(elem => elem.classList.contains('selected'));
 }
 
+/**
+ * Switch the active image in the modal by the provided offset.
+ *
+ * @param {number} offset - Positive or negative index delta.
+ */
 function modalImageSwitch(offset) {
     var galleryButtons = all_gallery_buttons();
 
@@ -85,24 +114,39 @@ function modalImageSwitch(offset) {
     }
 }
 
+/**
+ * Placeholder for saving images from the modal view.
+ */
 function saveImage() {
 
 }
 
+/**
+ * Prevent event bubbling when save menu items are used.
+ */
 function modalSaveImage(event) {
     event.stopPropagation();
 }
 
+/**
+ * Navigate to the next image in the gallery.
+ */
 function modalNextImage(event) {
     modalImageSwitch(1);
     event.stopPropagation();
 }
 
+/**
+ * Navigate to the previous image in the gallery.
+ */
 function modalPrevImage(event) {
     modalImageSwitch(-1);
     event.stopPropagation();
 }
 
+/**
+ * Keyboard handler for modal controls (arrows, escape and save hotkey).
+ */
 function modalKeyHandler(event) {
     switch (event.key) {
     case "s":
@@ -120,6 +164,9 @@ function modalKeyHandler(event) {
     }
 }
 
+/**
+ * Prepare a gallery image element so clicking opens the lightbox viewer.
+ */
 function setupImageForLightbox(e) {
     if (e.dataset.modded) {
         return;
@@ -151,16 +198,25 @@ function setupImageForLightbox(e) {
 
 }
 
+/**
+ * Toggle the fullscreen CSS class on the modal image.
+ */
 function modalZoomSet(modalImage, enable) {
     if (modalImage) modalImage.classList.toggle('modalImageFullscreen', !!enable);
 }
 
+/**
+ * Toggle fullscreen mode for the modal image when clicking the zoom control.
+ */
 function modalZoomToggle(event) {
     var modalImage = gradioApp().getElementById("modalImage");
     modalZoomSet(modalImage, !modalImage.classList.contains('modalImageFullscreen'));
     event.stopPropagation();
 }
 
+/**
+ * Alternate between tiling the image as a background or displaying it normally.
+ */
 function modalTileImageToggle(event) {
     const modalImage = gradioApp().getElementById("modalImage");
     const modal = gradioApp().getElementById("lightboxModal");

@@ -3,16 +3,34 @@ var re_num = /^[.\d]+$/;
 var original_lines = {};
 var translated_lines = {};
 
+/**
+ * Determine whether localization data is available.
+ *
+ * @returns {boolean} True if localization dictionary is loaded.
+ */
 function hasLocalization() {
     return window.localization && Object.keys(window.localization).length > 0;
 }
 
+/**
+ * Collect all text nodes under a DOM element.
+ *
+ * @param {Node} el - Root element.
+ * @returns {Array<Node>} List of text nodes.
+ */
 function textNodesUnder(el) {
     var n, a = [], walk = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null, false);
     while ((n = walk.nextNode())) a.push(n);
     return a;
 }
 
+/**
+ * Check if the provided text node is eligible for translation.
+ *
+ * @param {Node} node - DOM node being inspected.
+ * @param {string} text - Text content of the node.
+ * @returns {boolean} True if the node can be translated.
+ */
 function canBeTranslated(node, text) {
     if (!text) return false;
     if (!node.parentElement) return false;
@@ -22,6 +40,12 @@ function canBeTranslated(node, text) {
     return true;
 }
 
+/**
+ * Look up a translation for the given string and track usage.
+ *
+ * @param {string} text - Original text.
+ * @returns {string|undefined} Translated text or undefined if missing.
+ */
 function getTranslation(text) {
     if (!text) return undefined;
 
@@ -37,6 +61,9 @@ function getTranslation(text) {
     return tl;
 }
 
+/**
+ * Replace text content of a node with its translated equivalent.
+ */
 function processTextNode(node) {
     var text = node.textContent.trim();
 
@@ -51,6 +78,9 @@ function processTextNode(node) {
     }
 }
 
+/**
+ * Recursively translate the given DOM node and its descendants.
+ */
 function processNode(node) {
     if (node.nodeType == 3) {
         processTextNode(node);
@@ -76,10 +106,17 @@ function processNode(node) {
     });
 }
 
+/**
+ * Re-run localization on the style selection elements.
+ */
 function refresh_style_localization() {
     processNode(document.querySelector('.style_selections'));
 }
 
+/**
+ * Translate all translatable text within the page, including tooltips
+ * and placeholders defined in the Gradio config.
+ */
 function localizeWholePage() {
     processNode(gradioApp());
 

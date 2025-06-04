@@ -1,5 +1,8 @@
 window.main_viewer_height = 512;
 
+/**
+ * Recalculate gallery column count based on the viewer size.
+ */
 function refresh_grid() {
     let gridContainer = document.querySelector('#final_gallery .grid-container');
     let final_gallery = document.getElementById('final_gallery');
@@ -12,6 +15,9 @@ function refresh_grid() {
     }
 }
 
+/**
+ * Invoke refresh_grid multiple times to account for animations or delays.
+ */
 function refresh_grid_delayed() {
     refresh_grid();
     setTimeout(refresh_grid, 100);
@@ -19,6 +25,9 @@ function refresh_grid_delayed() {
     setTimeout(refresh_grid, 1000);
 }
 
+/**
+ * Resize the main viewer panels based on the window height.
+ */
 function resized() {
     let windowHeight = window.innerHeight - 260;
     let elements = document.getElementsByClassName('main_view');
@@ -34,10 +43,16 @@ function resized() {
     refresh_grid();
 }
 
+/**
+ * Smoothly scroll the window to the top of the page.
+ */
 function viewer_to_top(delay = 100) {
     setTimeout(() => window.scrollTo({top: 0, behavior: 'smooth'}), delay);
 }
 
+/**
+ * Scroll the window to the prompt section or bottom of the viewer.
+ */
 function viewer_to_bottom(delay = 100) {
     let element = document.getElementById('positive_prompt');
     let yPos = window.main_viewer_height;
@@ -57,6 +72,9 @@ onUiLoaded(async () => {
     resized();
 });
 
+/**
+ * Trigger an input event when the style selection dropdown loses focus.
+ */
 function on_style_selection_blur() {
     let target = document.querySelector("#gradio_receiver_style_selections textarea");
     target.value = "on_style_selection_blur " + Math.random();

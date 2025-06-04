@@ -1,4 +1,9 @@
 // based on https://github.com/AUTOMATIC1111/stable-diffusion-webui/blob/v1.6.0/script.js
+/**
+ * Retrieve the root element of the Gradio application.
+ *
+ * @returns {Document|ShadowRoot} Root node used to query UI elements.
+ */
 function gradioApp() {
     const elems = document.getElementsByTagName('gradio-app');
     const elem = elems.length == 0 ? document : elems[0];
@@ -146,6 +151,9 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
+/**
+ * Display a sample image when hovering over style selection labels.
+ */
 function initStylePreviewOverlay() {
     let overlayVisible = false;
     const samplesPath = document.querySelector("meta[name='samples-path']").getAttribute("content")
@@ -181,7 +189,7 @@ function initStylePreviewOverlay() {
 }
 
 /**
- * checks that a UI element is not in another hidden element or tab content
+ * Check that a UI element is not hidden by another element or inactive tab.
  */
 function uiElementIsVisible(el) {
     if (el === document) {
@@ -195,6 +203,9 @@ function uiElementIsVisible(el) {
     return uiElementIsVisible(el.parentNode);
 }
 
+/**
+ * Determine if a DOM element is currently within the viewport.
+ */
 function uiElementInSight(el) {
     const clRect = el.getBoundingClientRect();
     const windowHeight = window.innerHeight;
@@ -203,10 +214,16 @@ function uiElementInSight(el) {
     return isOnScreen;
 }
 
+/**
+ * Play the configured audio notification if present.
+ */
 function playNotification() {
     gradioApp().querySelector('#audio_notification audio')?.play();
 }
 
+/**
+ * Reload the application with the specified theme parameter.
+ */
 function set_theme(theme) {
     var gradioURL = window.location.href;
     if (!gradioURL.includes('?__theme=')) {

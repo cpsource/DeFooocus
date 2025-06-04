@@ -2,11 +2,20 @@ onUiLoaded(async() => {
     // Helper functions
 
     // Detect whether the element has a horizontal scroll bar
+    /**
+     * Check if the given element has a horizontal scrollbar.
+     *
+     * @param {HTMLElement} element
+     * @returns {boolean}
+     */
     function hasHorizontalScrollbar(element) {
         return element.scrollWidth > element.clientWidth;
     }
 
     // Function for defining the "Ctrl", "Shift" and "Alt" keys
+    /**
+     * Determine if a specific modifier key is pressed during an event.
+     */
     function isModifierKey(event, key) {
         switch (key) {
         case "Ctrl":
@@ -21,6 +30,9 @@ onUiLoaded(async() => {
     }
 
     // Create hotkey configuration with the provided options
+    /**
+     * Clone the default hotkey configuration object.
+     */
     function createHotkeyConfig(defaultHotkeysConfig) {
         const result = {}; // Resulting hotkey configuration
         for (const key in defaultHotkeysConfig) {
@@ -53,6 +65,9 @@ onUiLoaded(async() => {
 
     const elemData = {};
 
+    /**
+     * Attach zoom and pan functionality to the specified canvas element.
+     */
     function applyZoomAndPan(elemId) {
         const targetElement = gradioApp().querySelector(elemId);
 
@@ -72,6 +87,9 @@ onUiLoaded(async() => {
         let fullScreenMode = false;
 
         // Create tooltip
+        /**
+         * Build a tooltip showing all available canvas hotkeys.
+         */
         function createTooltip() {
             const toolTipElemnt =
                 targetElement.querySelector(".image-container");
@@ -147,6 +165,9 @@ onUiLoaded(async() => {
         }
 
         // Reset the zoom level and pan position of the target element to their initial values
+        /**
+         * Return the element to its original zoom and pan state.
+         */
         function resetZoom() {
             elemData[elemId] = {
                 zoomLevel: 1,
@@ -189,6 +210,9 @@ onUiLoaded(async() => {
         }
 
         // Toggle the zIndex of the target element between two values, allowing it to overlap or be overlapped by other elements
+        /**
+         * Force or toggle the overlapping state of the canvas container.
+         */
         function toggleOverlap(forced = "") {
             const zIndex1 = "0";
             const zIndex2 = "998";
@@ -204,6 +228,9 @@ onUiLoaded(async() => {
         }
 
         // Adjust the brush size based on the deltaY value from a mouse wheel event
+        /**
+         * Modify the brush radius slider when using the scroll wheel.
+         */
         function adjustBrushSize(
             elemId,
             deltaY,
@@ -240,6 +267,9 @@ onUiLoaded(async() => {
         fileInput.addEventListener("click", resetZoom);
 
         // Update the zoom level and pan position of the target element based on the values of the zoomLevel, panX and panY variables
+        /**
+         * Apply a new zoom level keeping the pointer position stable.
+         */
         function updateZoom(newZoomLevel, mouseX, mouseY) {
             newZoomLevel = Math.max(0.1, Math.min(newZoomLevel, 15));
 
@@ -258,6 +288,9 @@ onUiLoaded(async() => {
         }
 
         // Change the zoom level based on user interaction
+        /**
+         * Increment or decrement zoom level reacting to wheel events.
+         */
         function changeZoomLevel(operation, e) {
             if (isModifierKey(e, hotkeysConfig.canvas_hotkey_zoom)) {
                 e.preventDefault();
@@ -328,6 +361,9 @@ onUiLoaded(async() => {
         }
 
         // Undo last action
+        /**
+         * Trigger an undo operation for canvas changes.
+         */
         function undoLastAction(e) {
             let isCtrlPressed = isModifierKey(e, hotkeysConfig.canvas_zoom_undo_extra_key)
             const isAuxButton = e.button >= 3;
@@ -423,6 +459,9 @@ onUiLoaded(async() => {
         }
 
         // Handle keydown events
+        /**
+         * Process global keyboard shortcuts while the canvas is active.
+         */
         function handleKeyDown(event) {
             // Disable key locks to make pasting from the buffer work correctly
             if ((event.ctrlKey && event.code === 'KeyV') || (event.ctrlKey && event.code === 'KeyC') || event.code === "F5") {
@@ -509,6 +548,9 @@ onUiLoaded(async() => {
         // Handle events only inside the targetElement
         let isKeyDownHandlerAttached = false;
 
+        /**
+         * Attach key handlers when the mouse enters the canvas area.
+         */
         function handleMouseMove() {
             if (!isKeyDownHandlerAttached) {
                 document.addEventListener("keydown", handleKeyDown);
@@ -518,6 +560,9 @@ onUiLoaded(async() => {
             }
         }
 
+        /**
+         * Remove global key handlers when the mouse leaves the canvas.
+         */
         function handleMouseLeave() {
             if (isKeyDownHandlerAttached) {
                 document.removeEventListener("keydown", handleKeyDown);
@@ -546,6 +591,9 @@ onUiLoaded(async() => {
         });
 
         // Handle the move event for pan functionality. Updates the panX and panY variables and applies the new transform to the target element.
+        /**
+         * Begin canvas panning when the move hotkey is pressed.
+         */
         function handleMoveKeyDown(e) {
 
             // Disable key locks to make pasting from the buffer work correctly
@@ -570,6 +618,9 @@ onUiLoaded(async() => {
             }
         }
 
+        /**
+         * Stop canvas panning when the move hotkey is released.
+         */
         function handleMoveKeyUp(e) {
             if (e.code === hotkeysConfig.canvas_hotkey_move) {
                 isMoving = false;
@@ -580,6 +631,9 @@ onUiLoaded(async() => {
         document.addEventListener("keyup", handleMoveKeyUp);
 
         // Detect zoom level and update the pan speed.
+        /**
+         * Update canvas translation based on mouse movement.
+         */
         function updatePanPosition(movementX, movementY) {
             let panSpeed = 2;
 
@@ -597,6 +651,9 @@ onUiLoaded(async() => {
             });
         }
 
+        /**
+         * Pan the canvas when arrow keys are held and move mode is active.
+         */
         function handleMoveByKey(e) {
             if (isMoving && elemId === activeElement) {
                 updatePanPosition(e.movementX, e.movementY);
@@ -613,6 +670,9 @@ onUiLoaded(async() => {
         };
 
         // Checks for extension
+        /**
+         * Ensure the canvas stays within its container when resized.
+         */
         function checkForOutBox() {
             const parentElement = targetElement.closest('[id^="component-"]');
             if (parentElement.offsetWidth < targetElement.offsetWidth && !targetElement.isExpanded) {

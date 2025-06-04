@@ -1,9 +1,18 @@
+/**
+ * Emit an input event for the given element so frameworks detect value changes.
+ *
+ * @param {HTMLElement} target - Element to dispatch the event on.
+ */
 function updateInput(target) {
     let e = new Event("input", {bubbles: true});
     Object.defineProperty(e, "target", {value: target});
     target.dispatchEvent(e);
 }
 
+/**
+ * Handle keyboard shortcuts for editing attention values in prompts.
+ * Up/Down arrows adjust or add weighting around the current selection.
+ */
 function keyupEditAttention(event) {
     let target = event.originalTarget || event.composedPath()[0];
     if (!target.matches("*:is([id*='_prompt'], .prompt) textarea")) return;
@@ -123,6 +132,8 @@ function keyupEditAttention(event) {
 
 }
 
+// Bind the keyboard handler globally so prompt fields react to arrow keys
+// for weight adjustment.
 addEventListener('keydown', (event) => {
     keyupEditAttention(event);
 });
